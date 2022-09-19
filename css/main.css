@@ -1,0 +1,97 @@
+body {
+  background-color: white
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 54px;
+  text-align: center;
+  font-weight: 400;
+  margin: 20px;
+}
+
+h3 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.tavg-info {
+  background-color: #ffb677;
+  color: white;
+}
+
+.prcp-info {
+  background-color: #5f6caf;
+  color: white;
+}
+
+.tmin-info {
+  background-color: #edf7fa;
+  color: rgb(0, 0, 0);
+}
+
+.tmax-info {
+  background-color: #ff8364;
+  color: white;
+}
+
+.chart-section {
+  max-width: 900px;
+}
+
+.section {
+  padding: 10px;
+  border-radius: 12px;
+  /* border: #edf7fa solid 3px; */
+  background-color: white;
+}
+
+.middle {
+  max-width: 1000px;
+}
+
+#inches {
+  font-size: 16px;
+}
+
+.month-data {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.month-info {
+  font-size: 11px;
+  max-width: 110px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.month-info-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.forecast p {
+  line-height: 1.2;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  margin: auto;
+}

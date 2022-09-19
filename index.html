@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <script
+      src="https://kit.fontawesome.com/606d8453fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- link to axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- link to chat.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js" defer></script>
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>What's the weather like in...</h1>
+      <form class="row my-5" id="searchForm">
+        <div class="mb-2">
+          <label class="visually-hidden" for="citySearch">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="citySearch"
+            placeholder="City"
+          />
+        </div>
+        <div class="mb-2">
+          <label class="visually-hidden" for="monthChoice">Preference</label>
+          <select class="form-select" id="monthChoice">
+            <option selected value="0">Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-info">Search</button>
+        </div>
+      </form>
+      <div class="row middle">
+        <div class="col-lg-8 monthly section me-3 mb-5">
+          <h3 id="monthly-heading"></h3>
+          <div class="month-info-container mt-3">
+            <div class="month-info tavg-info">
+              Average Temperature:
+              <div class="month-data"><span id="tavg"></span> °F</div>
+            </div>
+            <div class="month-info prcp-info">
+              Average Precipitation:
+              <div class="month-data">
+                <span id="prcp"></span>
+                <span id="inches">inches</span>
+              </div>
+            </div>
+            <div class="month-info tmin-info">
+              Minimum Temperature:
+              <div class="month-data"><span id="tmin"></span> °F</div>
+            </div>
+            <div class="month-info tmax-info">
+              Maximum Temperature:
+              <div class="month-data"><span id="tmax"></span> °F</div>
+            </div>
+          </div>
+        </div>
+        <div class="col today section mb-5">
+          <h3 id="today-city"></h3>
+          <div class="row">
+            <div class="col-6" id="today-icon"></div>
+            <div class="col-6 forecast">
+              <h4 class="mt-2"><span id="today-temp"></span></h4>
+              <p><span id="today-desc"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row section chart-section">
+        <!-- chart -->
+
+        <h3 id="chart-title"></h3>
+        <div id="update-chart">
+          <canvas id="mychart"></canvas>
+          <!-- <canvas id="mychart"> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
