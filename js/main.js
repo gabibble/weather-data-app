@@ -840,8 +840,8 @@ function createChart(temps, rain, city) {
         label: "percipitation",
         data: rain,
         backgroundColor: "#5f6caf54",
-        borderColor: "#5f6cafaa",
-        borderWidth: 2,
+        // borderColor: "#5f6cafaa",
+        // borderWidth: 2,
         type: "bar",
         borderRadius: 2,
         yAxisID: "tempAxis",
@@ -866,7 +866,7 @@ function createChart(temps, rain, city) {
         drawTicks: false,
         title: {
           display: true,
-          text: "Temperature in F",
+          text: "Temperature in °F",
           color: "#ff8364",
         },
       },
@@ -882,7 +882,7 @@ function createChart(temps, rain, city) {
         max: 12,
         title: {
           display: true,
-          text: "Rainfall in inches",
+          text: "Rainfall in Inches",
           color: "#5f6caf",
         },
       },
