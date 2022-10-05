@@ -1,6 +1,7 @@
-//tried to get this to connet to main js file but not sure how?
-
-
+//this module is storing data for a few different cities 
+//to allow the project to be tried out without a MetoStat API key
+//Portland, Chicago, New Oreleans, Miami, Tokyo, or Paris
+//https://rapidapi.com/meteostat/api/meteostat
 
 export function cityMonthly(name) {
 

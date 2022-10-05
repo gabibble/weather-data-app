@@ -67,7 +67,7 @@ const getData = async (city) => {
 };
 }
 
-//Renders chart JS chart with annual data
+//Renders chart JS chart with annual weather data
 function createChart(temps, rain, city) {
   document.querySelector(
     "#chart-title"
@@ -197,7 +197,6 @@ const load_data = async (city, month) => {
     Math.round(data[1][mon].prcp)
   );
   console.log("monthly rain in " + data[0].name + prcps);
-//not sure why but need to reset the innerhtml for the chart to refresh
   document.querySelector(
     "#update-chart"
   ).innerHTML = `<canvas id="mychart"></canvas>`;
