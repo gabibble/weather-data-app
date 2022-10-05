@@ -1,7 +1,12 @@
+//open weather api key
 let apiKey = "4b4875a4aa1ad99ee265ed1dc59a8d80";
-//meteostat api key needed to look up cities not saved in cities object
+
+//meteostat api key needed to look up cities. 
+//to try app without api key, look up data for one of the saved cities: 
+//Portland, Chicago, New Oreleans, Miami, Tokyo, or Paris
+
 let apiKey2 = "";
-import cities from "../js/monthcities"
+import { cityMonthly } from "./monthcities.js"
 
 let months = [
   "January",
@@ -18,9 +23,6 @@ let months = [
   "December",
 ];
 
-function cityMonthly(name) {
-  return cities[name];
-}
 
 //APP CALL FOR MONTHLY DATA
 //DOCS:
@@ -42,8 +44,7 @@ const getMonthData = async (lat, lon) => {
   return data.data;
 };
 
-//https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
-
+//API call for current forecast 
 const getData = async (city) => {
   let response = await axios.get(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
@@ -66,14 +67,13 @@ const getData = async (city) => {
 };
 }
 
+//Renders chart JS chart with annual data
 function createChart(temps, rain, city) {
   document.querySelector(
     "#chart-title"
   ).innerHTML = `Average Weather in ${city}`;
 
   Chart.defaults.font.size = 12;
-  //   Chart.defaults.font.family = "Lato";
-  // Chart.defaults.font.color = "#999";
   Chart.defaults.borderColor = "#eee";
 
   let data = {
@@ -106,8 +106,6 @@ function createChart(temps, rain, city) {
         label: "percipitation",
         data: rain,
         backgroundColor: "#5f6caf54",
-        // borderColor: "#5f6cafaa",
-        // borderWidth: 2,
         type: "bar",
         borderRadius: 2,
         yAxisID: "tempAxis",
