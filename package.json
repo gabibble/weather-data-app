@@ -1,3 +1,9 @@
 {
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "sirv-cli": "^2.0.2"
+  },
+  "scripts": {
+    "start": "sirv --port 8080 --cors --single --host"
+  }
 }
