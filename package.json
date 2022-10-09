@@ -4,6 +4,6 @@
     "sirv-cli": "^2.0.2"
   },
   "scripts": {
-    "start": "sirv --port 8080 --cors --single --host"
+    "start": "sirv --port 64628 --cors --single --host"
   }
 }
